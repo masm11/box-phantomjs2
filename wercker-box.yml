@@ -8,9 +8,12 @@ keywords:
     - phantomjs
 script: |
     cd $HOME
+    mkdir pjs
+    cd pjs
     wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
     tar jxf phantomjs-2.0.0-ubuntu-12.04.tar.bz2
-    mv phantomjs phantomjs/bin/
-    rm phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+    mv phantomjs ../phantomjs/bin/
+    cd ..
+    rm -fr pjs
     ldd phantomjs/bin/phantomjs
     phantomjs/bin/phantomjs -v
