@@ -8,9 +8,9 @@ keywords:
     - phantomjs
 script: |
     cd $HOME
-    wget https://www.archlinux.org/packages/community/x86_64/phantomjs/download/
-    tar Jxf index.html usr/bin/phantomjs
-    mv usr/bin/phantomjs phantomjs/bin/
-    rmdir -p usr/bin
-    rm index.html
+    wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+    tar jxf phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+    mv phantomjs phantomjs/bin/
+    rm phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+    ldd phantomjs/bin/phantomjs
     phantomjs/bin/phantomjs -v
