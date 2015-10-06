@@ -1,13 +1,11 @@
-name: masm11/phantomjs2
+name: phantomjs2
 version: 0.0.1
 inherits: wercker/rvm@4.0.0
 type: main
 platform: ubuntu@12.04
-description: wercker box including phantomjs@2.0.0
+description: wercker box including phantomjs 2.0.0.
 keywords:
     - phantomjs
-packages:
-    - phantomjs@2.0.0
 script: |
     wget https://www.archlinux.org/packages/community/x86_64/phantomjs/download/
     tar Jxf index.html usr/bin/phantomjs
