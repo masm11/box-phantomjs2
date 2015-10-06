@@ -1,6 +1,6 @@
 name: masm11/phantomjs2
 version: 0.0.1
-inherits: wercker/rvm
+inherits: wercker/rvm@4.0.0
 type: main
 platform: ubuntu@12.04
 description: wercker box including phantomjs@2.0.0
