@@ -14,3 +14,4 @@ script: |
   mv usr/bin/phantomjs phantomjs/bin/
   rmdir -p usr/bin
   phantomjs/bin/phantomjs -v
+
