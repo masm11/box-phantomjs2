@@ -5,12 +5,12 @@ type: main
 platform: ubuntu@12.04
 description: wercker box including phantomjs@2.0.0
 keywords:
-  - phantomjs
+    - phantomjs
 packages:
-  - phantomjs@2.0.0
+    - phantomjs@2.0.0
 script: |
-  wget https://www.archlinux.org/packages/community/x86_64/phantomjs/download/
-  tar Jxf index.html usr/bin/phantomjs
-  mv usr/bin/phantomjs phantomjs/bin/
-  rmdir -p usr/bin
-  phantomjs/bin/phantomjs -v
+    wget https://www.archlinux.org/packages/community/x86_64/phantomjs/download/
+    tar Jxf index.html usr/bin/phantomjs
+    mv usr/bin/phantomjs phantomjs/bin/
+    rmdir -p usr/bin
+    phantomjs/bin/phantomjs -v
