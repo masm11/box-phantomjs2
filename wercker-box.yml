@@ -7,9 +7,10 @@ description: wercker box including phantomjs 2.0.0.
 keywords:
     - phantomjs
 script: |
-    type -a phantomjs
+    cd $HOME
     wget https://www.archlinux.org/packages/community/x86_64/phantomjs/download/
     tar Jxf index.html usr/bin/phantomjs
     mv usr/bin/phantomjs phantomjs/bin/
     rmdir -p usr/bin
+    rm index.html
     phantomjs/bin/phantomjs -v
