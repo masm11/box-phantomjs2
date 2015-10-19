@@ -1,5 +1,5 @@
 name: phantomjs2
-version: 0.0.2
+version: 0.0.3
 inherits: wercker/rvm@4.0.0
 type: main
 platform: ubuntu@12.04
@@ -17,8 +17,12 @@ script: |
     rm -fr pjs
     ldd phantomjs/bin/phantomjs
     phantomjs/bin/phantomjs -v
-    sudo apt-get update
-    sudo apt-get upgrade
-
-#    sudo apt-get remove nodejs
-#    sudo apt-get install npm nodejs nodejs-dev node-request node-mkdirp node-minimatch node-semver node-ini node-graceful-fs node-abbrev node-nopt node-fstream node-rimraf node-tar node-which
+    wget https://nodejs.org/dist/v0.12.6/node-v0.12.6.tar.gz
+    tar zxf node-v0.12.6.tar.gz
+    cd node-v0.12.6
+    PYTHON=/usr/bin/python2 /usr/bin/python2 ./configure
+    make
+    sudo make install
+    cd ..
+    rm -fr node-v0.12.6*
+    echo $PATH
