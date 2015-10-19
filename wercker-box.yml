@@ -18,7 +18,5 @@ script: |
     ldd phantomjs/bin/phantomjs
     phantomjs/bin/phantomjs -v
     sudo apt-get update
-    sudo apt-get remove npm
     sudo apt-get remove nodejs
-    sudo apt-get install nodejs
-    sudo apt-get install npm
+    sudo apt-get install npm nodejs nodejs-dev node-request node-mkdirp node-minimatch node-semver node-ini node-graceful-fs node-abbrev node-nopt node-fstream node-rimraf node-tar node-which
